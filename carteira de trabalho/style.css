@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #1E3A8A;
+    --azul: #2563EB;
+    --azul-claro: #DBEAFE;
+    --branco: #FFFFFF;
+    --cinza: #F3F4F6;
+    --texto: #111827;
+}
+
+
+
+body {
+    background: linear-gradient(to bottom, #1E3A8A, #DBEAFE);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to right, #1E3A8A, #DBEAFE);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548);
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus{
+    border-color:var(--azul);
+    box-shadow:0 0 8px var(--azul);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--azul-escuro);
+    transition:0.3s;
+}
