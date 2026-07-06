@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@
 
 
 body {
-    background: linear-gradient(to bottom, #1E3A8A, #DBEAFE);
+    background: linear-gradient(145deg, #1E3A8A, #2563EB);
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
 }
@@ -32,7 +34,8 @@ main {
 }
 
 .container {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -62,9 +65,35 @@ input {
     font-size: 16px;
 }
 
-input:focus{
-    border-color:var(--azul);
-    box-shadow:0 0 8px var(--azul);
+input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 8px var(--azul);
+}
+
+label {
+    color: var(--branco);
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+}
+
+a {
+    color: var(--azul-escuro);
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.esqueceu-a-senha {
+    color: var(--branco);
+    gap: 5px;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 button {
@@ -76,9 +105,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: var(--azul-escuro);
-    transition:0.3s;
 }

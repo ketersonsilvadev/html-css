@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RG Digital</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <div class="container">
@@ -13,18 +15,27 @@
                 RG Digital
             </h1>
 
-            <div class="login">
-               <input type="text" placeholder="Digite seu CPF" maxlength="14" required>
-            </div>
+            <form>
+                <div class="login">
+                    <label for="CPF">CPF</label>
+                    <input type="text" id="CPF" placeholder="Digite seu CPF" maxlength="14" required>
+                </div>
 
-            <div class="login">
-                <input type="password" placeholder="Digite sua senha" required>
-            </div>
+                <div class="login">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
 
-            <button>
-                Entrar
-            </button>
+                <div class="esqueceu-a-senha">
+                    Esqueceu sua senha? <a href="#">Recupere aqui</a>
+                </div>
+
+                <button>
+                    Entrar
+                </button>
+            </form>
         </div>
     </main>
 </body>
+
 </html>
