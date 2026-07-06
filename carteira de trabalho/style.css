@@ -36,12 +36,12 @@ main {
 .container {
     width: 90%;
     max-width: 400px;
-    height: 300px;
+    height: 330px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
     background: linear-gradient(to right, #1E3A8A, #DBEAFE);
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548);
