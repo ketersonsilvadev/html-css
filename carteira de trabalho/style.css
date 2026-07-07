@@ -80,10 +80,11 @@ label {
 a {
     color: var(--azul-escuro);
     text-decoration: none;
+    text-decoration-color: var(--azul-escuro);
 }
 
 a:hover {
-    color: black;
+    color: red;
     text-decoration: underline;
 }
 
@@ -105,9 +106,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    font-weight: 600;
 }
 
 button:hover {
     background-color: var(--azul-escuro);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
