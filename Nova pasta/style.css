@@ -132,7 +132,7 @@ ul {
 
 .hero-content .btn-primario {
     background: #f780002c;
-    padding: 10px;
+    padding:px;
     width:fit-content;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -142,7 +142,7 @@ ul {
 
 .btn-secundario {
     border: 1px solid;
-    padding: 10px;
+    padding: px;
     width: fit-content;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.411);
 }
