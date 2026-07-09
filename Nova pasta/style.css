@@ -19,19 +19,34 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: var(--vermelho);
+    background: var(--branco);
     color: var(--escuro);
 }
 
+
+main {
+    background: var(--vermelho);
+}
+
 header {
+    box-shadow: 0 2px 4px rgba(236, 127, 2, 0.596);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    font-family: "Nunito Sans", sans-serif;
     background-color: var(--escuro);
     letter-spacing: 0.5px;
 }
+
+.listras {
+    background-image: repeating-linear-gradient(-45deg,
+            var(--amarelo),
+            var(--amarelo) 14px,
+            var(--laranja) 14px,
+            var(--laranja) 28px);
+    height: 10px;
+}
+
 
 a {
     text-decoration: none;
@@ -77,24 +92,61 @@ ul {
     gap: 20px;
 }
 
+.entrega {
+    display: flex;
+}
+
+.entrega span {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 16px;
+    color: var(--branco);
+    background-color: var(--amarelo);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.199);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .hero {
-    padding: 80px 40px;
-    text-align: center;
-}
+    padding: 40px 60px;
+ }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
 
-.hero h2 {
-    font-family: "Bebas Neue", sans-serif;
+.hero-content h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--branco);
     font-size: 40px;
-    color: var(--branco);
-    margin-bottom: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 4px;
+    text-shadow: 0 4px 6px rgba(10, 10, 10, 0.952)
 }
 
-.hero p {
-    color: var(--branco);
-    margin-bottom: 24px;
+.hero-content p {
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 32px;
+    color: #FFE9DC;
+}
+
+.hero-content .btn-primario {
+    background: #f780002c;
+    padding: 10px;
+    width:fit-content;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.301);
+}
+
+
+.btn-secundario {
+    border: 1px solid;
+    padding: 10px;
+    width: fit-content;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.411);
+}
+
+.btn-secundario:hover {
+    background: #ffffff17;
 }
