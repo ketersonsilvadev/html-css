@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Share Tech Mono", monospace;
 }
 
 body {
@@ -9,7 +12,6 @@ body {
     background-position: center;
     background-size: cover;
     color: #fff;
-    font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +19,16 @@ body {
 }
 
 
-h1{
+h1 {
     font-size: 2rem;
     color: #c90000;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
-form{
-    box-shadow: 4px 4px 4px;
+form {
+    box-shadow: 0 2px 2px 2px rgba(255, 0, 0, 0.178);
     border-radius: 20px;
     padding: 20px;
     background-color: #0000005b;
@@ -36,14 +38,55 @@ form{
     transform: translate(-50%, -50%);
 }
 
-input{
+input {
     color: #fff;
-    display: block;
+    display: flex;
     padding: 0.75rem;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #c90000;
     outline: none;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     margin-bottom: 4px;
+    margin-top: 3px;
+}
+
+
+input:focus {
+    color: #c90000;
+    background-color: #c900003d;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.label{
+    color: #ffffff79;
+    margin:2px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.822);
+    border: none;
+    cursor: pointer;
+    color: rgb(7, 7, 7);
+    background-color: #c90000;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transition: 0.5s ease;
+    transform: scale(1.05);
+    background: #5f0101c2;
+}
+
+.btn:active{
+    transform: scale(0.95);
 }
