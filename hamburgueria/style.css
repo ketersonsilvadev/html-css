@@ -214,3 +214,93 @@ footer {
     font-weight: bold;
     margin-top: 0px;
 }
+
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 16px 20px;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    ul {
+        font-size: 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero-content p {
+        text-align: center;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content .btn-primario,
+    .btn-secundario {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .entrega {
+        justify-content: center;
+    }
+
+    .text-hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        padding: 20px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .entrega span {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
