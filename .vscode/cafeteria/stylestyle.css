@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-coffee-dark: #4A2C2A;
+    /* texto, header, footer */
+    --color-coffee-medium: #6F4E37;
+    /* títulos, ícones */
+    --color-tan: #D2B48C;
+    /* fundos secundários, cards */
+    --color-cream: #F5F0E6;
+    /* fundo principal */
+    --color-caramel: #C9A66B;
+    /* botões, links, CTAs */
+}
+.hero{
+    align-items: center;
+    display: flex;
+    background: url(cafeteria/cafeteria/img/img1.png);
+    background-position: center, center;
+    width:100vw;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
