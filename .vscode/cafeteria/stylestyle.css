@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.884);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.nav-bar .link{
+    margin-top: 20px;
+      display: flex;
+      justify-content:center;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      text-transform: uppercase;
+      list-style: none;
+}
