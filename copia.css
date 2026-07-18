@@ -1,0 +1,284 @@
+/* ========================================
+   1. VARIÁVEIS (CUSTOM PROPERTIES)
+   Isso é o "tailwind.config" na mão.
+   Define suas cores uma vez, usa em qualquer lugar com var(--nome)
+   ======================================== */
+:root {
+  --color-coffee-dark: #4A2C2A;
+  --color-coffee: #6F4E37;
+  --color-coffee-light: #D2B48C;
+  --color-cream: #F5F0E6;
+  --color-caramel: #C9A66B;
+  --color-white: #FFFFFF;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* ========================================
+   2. RESET BÁSICO
+   Navegadores têm margens/paddings padrão diferentes.
+   Zerar isso evita surpresa.
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding e border não somam na largura do elemento */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-coffee-dark);
+  line-height: 1.5;
+}
+
+/* ========================================
+   3. HEADER
+   ======================================== */
+.header {
+  background-color: var(--color-coffee-dark);
+  color: var(--color-cream);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  max-width: 1152px;       /* limita a largura em telas grandes */
+  margin: 0 auto;           /* centraliza horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  color: var(--color-cream);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--color-caramel);
+}
+
+/* esconde o menu em telas pequenas (equivalente ao "hidden md:flex") */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-caramel);
+  color: var(--color-coffee-dark);
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px; /* valor alto = vira "pílula" */
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-coffee-light);
+}
+
+/* ========================================
+   4. HERO
+   ======================================== */
+.hero {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  gap: 40px;
+  align-items: center;
+}
+
+/* empilha as colunas em telas pequenas */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-eyebrow {
+  color: var(--color-caramel);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  font-size: 18px;
+  color: rgba(74, 44, 42, 0.8); /* coffee-dark com opacidade, via rgba */
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-coffee-dark);
+  font-weight: 600;
+  padding: 10px 22px;
+  border: 2px solid var(--color-coffee-dark);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(210, 180, 140, 0.4);
+}
+
+.hero-image-placeholder {
+  background-color: var(--color-coffee-light);
+  border-radius: 24px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(74, 44, 42, 0.4);
+}
+
+/* ========================================
+   5. CARDS DE PRODUTO
+   ======================================== */
+.products {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+.products-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablet */
+  }
+}
+
+@media (max-width: 640px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* 1 coluna em celular */
+  }
+}
+
+.card {
+  background-color: var(--color-white);
+  border: 1px solid rgba(210, 180, 140, 0.4);
+  border-radius: 16px;
+  overflow: hidden; /* garante que a imagem respeite o border-radius */
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  background-color: var(--color-coffee-light);
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(74, 44, 42, 0.4);
+  font-size: 14px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: rgba(74, 44, 42, 0.7);
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-price {
+  font-weight: 600;
+}
+
+.btn-add {
+  background-color: var(--color-caramel);
+  color: var(--color-coffee-dark);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+  background-color: var(--color-coffee-light);
+}
+
+/* ========================================
+   6. FOOTER
+   ======================================== */
+.footer {
+  background-color: var(--color-coffee-dark);
+  color: rgba(245, 240, 230, 0.7);
+  font-size: 14px;
+  text-align: center;
+  padding: 32px 0;
+}
