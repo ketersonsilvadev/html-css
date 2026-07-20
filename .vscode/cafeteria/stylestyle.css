@@ -16,14 +16,28 @@
     --color-caramel: #C9A66B;
     /* botões, links, CTAs */
 }
-.hero{
-    align-items: center;
+
+.header-container{
+    
+    padding: 20px;
+    background: #4A2C2A;
     display: flex;
-    background: url(cafeteria/cafeteria/img/img1.png);
-    background-position: center, center;
-    width:100vw;
-    height:100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between
 }
 
+.header-container .logo{
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.nav a{
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+   margin-left: 20px;
+   font-size: 20px;
+
+}
