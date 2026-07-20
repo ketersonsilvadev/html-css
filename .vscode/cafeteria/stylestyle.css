@@ -21,9 +21,11 @@
 
 body {
     font-family: "Playfair Display", serif;
+    background: #C9A66B;
 }
 
 .header-container {
+    position: relative;
     padding: 20px;
     background: var(--color-coffee-dark);
     display: flex;
@@ -37,8 +39,9 @@ body {
     color: #F5E6C8;
     text-shadow: 2px 2px 6px rgba(111, 78, 55, 0.8);
     color: #c98c61;
-    font-weight: bold;
-    font-size: 2rem;
+    font-size: 2em;
+    font-weight: bolder;
+    font-variant: small-caps;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -59,11 +62,90 @@ a:hover {
     color: var(--color-tan);
 }
 
-.btn-primary{
-    padding: 20px 20px;
+.btn-primary {
+    cursor: pointer;
+    color: white;
+    background: var(--color-caramel);
+    margin-top: 12px;
+    margin-right: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: none;
     display: flex;
     align-items: center;
+    font-variant: small-caps;
+    box-shadow: 10px 0px 40px #d2b48c9c;
+}
 
+.btn-primary:hover {
+    background: var(--color-tan);
+    transform: scale(1.1);
+}
+
+.btn-primary:active {
+    transform: scale(1.0);
+}
+
+.hero {
+  position: relative;
+  background-image: url(cafeteria/cafeteria/img/img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+p {
+    color: #D2B48C;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+h1 {
+    color: #ffffffbb;
+    font-variant: small-caps;
+    margin-left: 14px;
+}
+
+.sub-title br {
+    text-indent: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.btn-secondary {
+    cursor: pointer;
+    color: white;
+    background: var(--color-caramel);
+    margin-top: 12px;
+    margin-right: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-variant: small-caps;
+    box-shadow: 10px 0px 40px #d2b48c9c;
 }
