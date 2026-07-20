@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -17,27 +19,51 @@
     /* botões, links, CTAs */
 }
 
-.header-container{
-    
+body {
+    font-family: "Playfair Display", serif;
+}
+
+.header-container {
     padding: 20px;
-    background: #4A2C2A;
+    background: var(--color-coffee-dark);
     display: flex;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between
 }
 
-.header-container .logo{
+.logo {
+    color: #F5E6C8;
+    text-shadow: 2px 2px 6px rgba(111, 78, 55, 0.8);
+    color: #c98c61;
+    font-weight: bold;
     font-size: 2rem;
     margin-left: 20px;
     margin-top: 20px;
 }
 
-.nav a{
+.nav-bar a {
+    cursor: pointer;
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-   margin-left: 20px;
-   font-size: 20px;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 6px rgba(111, 78, 55, 0.8);
+    color: #f5f0e663;
+}
+
+a:hover {
+    color: var(--color-tan);
+}
+
+.btn-primary{
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
 
 }
