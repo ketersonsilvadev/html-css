@@ -38,7 +38,6 @@ body {
 .logo {
     color: #F5E6C8;
     text-shadow: 2px 2px 6px rgba(111, 78, 55, 0.8);
-    color: #c98c61;
     font-size: 2em;
     font-weight: bolder;
     font-variant: small-caps;
@@ -53,9 +52,9 @@ body {
     text-decoration: none;
     margin-left: 12px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 6px rgba(111, 78, 55, 0.8);
-    color: #f5f0e663;
+    color: #f5f0e6;
 }
 
 a:hover {
@@ -63,6 +62,7 @@ a:hover {
 }
 
 .btn-primary {
+    text-decoration: none;
     cursor: pointer;
     color: white;
     background: var(--color-caramel);
@@ -88,7 +88,7 @@ a:hover {
 
 .hero {
   position: relative;
-  background-image: url(cafeteria/cafeteria/img/img1.png);
+  background-image: url(img/img0.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,20 +111,24 @@ a:hover {
   z-index: 1;
 }
 
-p {
-    color: #D2B48C;
+.eyebtow {
+    color:var(--color-tan);
     font-weight: bolder;
     margin-left: 10px;
+    display: block;
 }
 
 h1 {
     color: #ffffffbb;
     font-variant: small-caps;
     margin-left: 14px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-.sub-title br {
-    text-indent: 10px;
+.sub-title {
+    color: #D2B48C;
+    font-weight: bolder;
+    margin-left: 10px;
 }
 
 .hero-buttons {
@@ -149,3 +153,13 @@ h1 {
     font-variant: small-caps;
     box-shadow: 10px 0px 40px #d2b48c9c;
 }
+
+.btn-secondary:hover {
+    background: var(--color-tan);
+    transform: scale(1.1);
+}
+
+.btn-secondary:active {
+    transform: scale(1.0);
+}
+
