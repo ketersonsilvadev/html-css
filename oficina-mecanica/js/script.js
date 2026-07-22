@@ -1,8 +1,4 @@
-/* =========================================================
-   VETOR AUTO — script.js
-   Cada função tem uma responsabilidade só. Comente à vontade
-   por cima disso para estudar como cada parte funciona.
-   ========================================================= */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   ativarMenuMobile();
@@ -11,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   ativarValidacaoDeFormulario();
 });
 
-/* ---------- Menu mobile (hambúrguer) ---------- */
 function ativarMenuMobile() {
   const botao = document.getElementById('navToggle');
   const menu = document.getElementById('navMobile');
@@ -29,7 +24,6 @@ function ativarMenuMobile() {
   });
 }
 
-/* ---------- Marca o link do menu correspondente à página atual ---------- */
 function marcarLinkAtivo() {
   const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav a, .nav-mobile a').forEach((link) => {
@@ -40,7 +34,6 @@ function marcarLinkAtivo() {
   });
 }
 
-/* ---------- Revela elementos suavemente quando entram na tela ---------- */
 function ativarRevelacaoNoScroll() {
   const elementos = document.querySelectorAll('.revelar');
   if (!elementos.length) return;
@@ -65,7 +58,6 @@ function ativarRevelacaoNoScroll() {
   elementos.forEach((el) => observador.observe(el));
 }
 
-/* ---------- Validação simples do formulário de contato ---------- */
 function ativarValidacaoDeFormulario() {
   const form = document.getElementById('formContato');
   if (!form) return;
@@ -76,7 +68,6 @@ function ativarValidacaoDeFormulario() {
     evento.preventDefault();
     let formularioValido = true;
 
-    // Limpa erros anteriores
     form.querySelectorAll('.erro').forEach((el) => (el.textContent = ''));
 
     formularioValido = validarCampo('nome', (valor) => valor.trim().length >= 2,
@@ -92,8 +83,7 @@ function ativarValidacaoDeFormulario() {
       'Conte um pouco mais sobre o problema do veículo (mín. 10 caracteres).') && formularioValido;
 
     if (formularioValido) {
-      // Em um projeto real, aqui você faria um fetch() para seu back-end
-      // ou serviço de e-mail (ex: Formspree, EmailJS).
+
       form.reset();
       if (mensagemSucesso) {
         mensagemSucesso.textContent = 'Recebemos sua mensagem! Nossa equipe entra em contato em até 1 dia útil.';
