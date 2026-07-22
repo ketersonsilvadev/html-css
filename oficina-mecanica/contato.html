@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Vetor Auto Mecânica</title>
+  <meta name="description" content="Fale com a Vetor Auto Mecânica: telefone, e-mail, endereço e formulário de agendamento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">VETOR<span>AUTO</span></a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <a href="contato.html" class="btn btn-primario nav-cta">Agendar revisão</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+    <nav class="nav-mobile" id="navMobile" hidden aria-label="Navegação móvel">
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="contato.html" class="btn btn-primario" style="margin-top:12px; justify-content:center;">Agendar revisão</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pagina-hero">
+      <div class="container">
+        <span class="eyebrow" style="color:#fff;">Fale com a gente</span>
+        <h1>Vamos agendar o diagnóstico do seu carro</h1>
+        <p>Preencha o formulário ou fale direto pelo telefone — respondemos em até 1 dia útil.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container form-grid duas-colunas">
+
+        <form id="formContato" novalidate>
+          <div class="form-grid">
+            <div class="campo">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?">
+              <span class="erro" id="erro-nome"></span>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(34) 90000-0000">
+              <span class="erro" id="erro-telefone"></span>
+            </div>
+
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+              <span class="erro" id="erro-email"></span>
+            </div>
+
+            <div class="campo">
+              <label for="veiculo">Modelo do veículo</label>
+              <input type="text" id="veiculo" name="veiculo" placeholder="Ex: Corolla 2019">
+            </div>
+
+            <div class="campo">
+              <label for="servico">Serviço de interesse</label>
+              <select id="servico" name="servico">
+                <option value="">Selecione (opcional)</option>
+                <option value="diagnostico">Diagnóstico eletrônico</option>
+                <option value="freios">Freios e ABS</option>
+                <option value="suspensao">Suspensão</option>
+                <option value="eletrica">Elétrica automotiva</option>
+                <option value="revisao">Revisão completa</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="mensagem">Conte o que está acontecendo com o carro</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Ex: barulho ao frear, luz do painel acesa..."></textarea>
+              <span class="erro" id="erro-mensagem"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primario">Enviar mensagem</button>
+            <p class="mensagem-envio" id="mensagemEnvio" role="status"></p>
+          </div>
+        </form>
+
+        <div>
+          <div class="info-contato">
+            <div class="info-item">
+              <div class="icone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+              </div>
+              <div>
+                <strong>Telefone / WhatsApp</strong>
+                <span>(34) 99999-0000</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              </div>
+              <div>
+                <strong>E-mail</strong>
+                <span>contato@vetorauto.com.br</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Endereço</strong>
+                <span>Av. das Oficinas, 1200 — Delta, MG</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <strong>Horário</strong>
+                <span>Seg – Sex: 08h às 18h · Sáb: 08h às 13h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mapa-placeholder" style="margin-top:24px;">
+            Espaço reservado para o mapa (Google Maps embed)<br>
+            — insira aqui o &lt;iframe&gt; do Google Maps com o endereço da oficina.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="logo">VETOR<span>AUTO</span></p>
+        <p>Precisão que você enxerga, confiança que você sente.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>(34) 99999-0000</p>
+        <p>contato@vetorauto.com.br</p>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <p>Seg – Sex: 08h às 18h</p>
+        <p>Sáb: 08h às 13h</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 Vetor Auto Mecânica. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços — Vetor Auto Mecânica</title>
+  <meta name="description" content="Conheça todos os serviços da Vetor Auto: motor, freios, suspensão, elétrica, ar-condicionado e revisão completa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">VETOR<span>AUTO</span></a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <a href="contato.html" class="btn btn-primario nav-cta">Agendar revisão</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+    <nav class="nav-mobile" id="navMobile" hidden aria-label="Navegação móvel">
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="contato.html" class="btn btn-primario" style="margin-top:12px; justify-content:center;">Agendar revisão</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pagina-hero">
+      <div class="container">
+        <span class="eyebrow" style="color:#fff;">Nossos serviços</span>
+        <h1>Do diagnóstico ao pós-serviço</h1>
+        <p>Cada serviço abaixo passa por um diagnóstico antes da execução — você aprova o orçamento antes de qualquer troca de peça.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="grade-cards tres">
+
+          <article class="card-servico revelar" id="motor">
+            <div class="icone">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="10" rx="1"/><path d="M8 8V5h8v3"/></svg>
+            </div>
+            <h3>Motor</h3>
+            <p>Revisão de correias, óleo, velas e sistema de arrefecimento. Diagnóstico eletrônico incluso.</p>
+            <span class="preco">a partir de R$ 150</span>
+          </article>
+
+          <article class="card-servico revelar" id="freios">
+            <div class="icone">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h4l2-4 4 8 2-4h4"/></svg>
+            </div>
+            <h3>Freios e ABS</h3>
+            <p>Troca de pastilhas e discos, sangria do sistema e teste de frenagem antes da entrega.</p>
+            <span class="preco">a partir de R$ 180</span>
+          </article>
+
+          <article class="card-servico revelar" id="suspensao">
+            <div class="icone">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18l4-10 4 6 3-4 5 8"/></svg>
+            </div>
+            <h3>Suspensão</h3>
+            <p>Amortecedores, molas, bandejas e buchas — devolvemos a estabilidade e o silêncio do carro.</p>
+            <span class="preco">a partir de R$ 250</span>
+          </article>
+
+          <article class="card-servico revelar" id="eletrica">
+            <div class="icone">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+            </div>
+            <h3>Elétrica automotiva</h3>
+            <p>Bateria, alternador, chicotes e módulos — diagnóstico com scanner para evitar trocas desnecessárias.</p>
+            <span class="preco">a partir de R$ 100</span>
+          </article>
+
+          <article class="card-servico revelar" id="arcondicionado">
+            <div class="icone">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 8l20 8M22 8 2 16"/></svg>
+            </div>
+            <h3>Ar-condicionado</h3>
+            <p>Higienização, recarga de gás e reparo de compressor para o clima do seu carro voltar ao normal.</p>
+            <span class="preco">a partir de R$ 130</span>
+          </article>
+
+          <article class="card-servico revelar" id="revisao">
+            <div class="icone">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <h3>Revisão completa</h3>
+            <p>Checklist de 40 itens, troca de fluidos e relatório detalhado do estado geral do veículo.</p>
+            <span class="preco">a partir de R$ 220</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--claro">
+      <div class="container">
+        <div class="cta-final revelar" style="background: var(--azul-medio);">
+          <h2>Não achou o que precisa?</h2>
+          <p>Fale com a gente — se identificamos o problema no diagnóstico, ele entra no orçamento.</p>
+          <a href="contato.html" class="btn btn-escuro">Falar com a oficina</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="logo">VETOR<span>AUTO</span></p>
+        <p>Precisão que você enxerga, confiança que você sente.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>(34) 99999-0000</p>
+        <p>contato@vetorauto.com.br</p>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <p>Seg – Sex: 08h às 18h</p>
+        <p>Sáb: 08h às 13h</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 Vetor Auto Mecânica. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
