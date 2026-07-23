@@ -57,16 +57,53 @@ body {
 }
 
 .nav-bar a:hover {
-    color: #D2B48C;
+    color: var(--color-caramel);
 }
 
 .hero-box {
     background-image: url(img/img0.png);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 70vh;
     position: relative;
     background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 5% 8%;
+}
+.eyebtow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-caramel);
+  display: inline-block;
+  margin-bottom: -10px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-cream);
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.sub-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #E0E0E0;
+  line-height: 1.6;
+  margin-top: 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
