@@ -24,17 +24,49 @@ body {
     background: #C9A66B;
 }
 
-header{
-    background: var(--color-coffee-dark);
-    padding:35px;
-}
-
-.header-container{
+.header-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    padding: 40px;
+    background: #4A2C2A;
+    align-items: center;
+
 }
 
-.hero-box{
-    background: url(img/img0.png);
+.logo {
+    font-size: 2rem;
+    color: #F5F0E6;
+    font-weight: bolder;
+}
+
+.nav-bar {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.nav-bar a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #F5F0E6;
+    font-weight: none;
+}
+
+.nav-bar a:hover {
+    color: #D2B48C;
+}
+
+.hero-box {
+    background-image: url(img/img0.png);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
