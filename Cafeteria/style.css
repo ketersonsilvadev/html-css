@@ -306,6 +306,7 @@ header {
 }
 
 .card{
+    cursor: pointer;
     background-color: var(--card);
     border: 1px solid rgba(123, 75, 40, 0.5);
     border-radius: var(--radius-lg);
@@ -372,4 +373,35 @@ header {
         padding: 1.5rem;
         border-radius: var(--radius-md);
     }
+}
+
+@media(prefers-reduced-motion: reduce){
+    *,*::before,*::after{
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.about-text{
+    text-align: center;
+}
+
+.about-container{
+    margin-left: 50px;
+    text-align: center;
+    border: 3px solid rgba(123, 75, 40, 0.5);
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    padding: var(--space-lg);
+}
+
+.about-container strong{
+    color: var(--text-secondary);
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 20px;
+    
 }
