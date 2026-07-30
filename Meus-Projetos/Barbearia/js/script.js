@@ -1,35 +1,19 @@
-/* =========================================================
-   NAVALHA & OFÍCIO — script.js
-   -----------------------------------------------------------
-   Organização:
-   1. Utilidades
-   2. Header + menu mobile + barra de progresso
-   3. Animação de entrada ao rolar (reveal)
-   4. Contadores animados do hero
-   5. Dados de serviços e barbeiros (fonte única de verdade)
-   6. Sistema de agendamento (wizard de 5 passos)
-   7. Calendário customizado
-   8. Horários disponíveis
-   9. Resumo + integração com WhatsApp
-   10. Depoimentos (slider)
-   11. Rodapé (ano automático)
-   ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ============ 1. UTILIDADES ============ */
+
   const $  = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  /* ============ 2. HEADER + MENU MOBILE + BARRA DE PROGRESSO ============ */
+
   const header = $('#header');
   const scrollProgress = $('#scrollProgress');
 
   function onScroll(){
-    // Header muda de aparência após pequeno scroll
+
     header.classList.toggle('is-scrolled', window.scrollY > 40);
 
-    // Barra de progresso de leitura da página
+
     const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
     const progresso = alturaTotal > 0 ? (window.scrollY / alturaTotal) * 100 : 0;
     scrollProgress.style.width = progresso + '%';
@@ -50,9 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ============ 3. ANIMAÇÃO DE ENTRADA (REVEAL) ============ */
   const revealEls = $$('[data-reveal]');
-  // Aplica um pequeno atraso escalonado dentro de cada seção (efeito cascata)
+
   const porSecao = {};
   revealEls.forEach(el => {
     const secao = el.closest('section') || el.parentElement;
@@ -71,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
   revealEls.forEach(el => observer.observe(el));
 
-  /* ============ 4. CONTADORES ANIMADOS DO HERO ============ */
+
   const contadores = $$('[data-count]');
   function animarContador(el){
     const alvo = parseFloat(el.dataset.count);
@@ -81,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function passo(agora){
       const progresso = Math.min((agora - inicio) / duracao, 1);
-      const facilitado = 1 - Math.pow(1 - progresso, 3); // ease-out cúbico
+      const facilitado = 1 - Math.pow(1 - progresso, 3); 
       const valor = alvo * facilitado;
       el.textContent = casasDecimais > 0
         ? valor.toFixed(casasDecimais)
@@ -101,9 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroStatsEl = $('.hero__stats');
   if (heroStatsEl) heroStatsObserver.observe(heroStatsEl);
 
-  /* ============ 5. DADOS DE SERVIÇOS E BARBEIROS ============ */
-  // Fonte única de dados usada para montar as opções do agendamento.
-  // Mantém sincronia com os cartões estáticos exibidos nas seções "Serviços" e "Barbeiros".
+
   const servicesData = [
     { id: 'corte',        nome: 'Corte clássico',        preco: 65,  duracao: '45 min' },
     { id: 'barba',        nome: 'Barba completa',        preco: 55,  duracao: '30 min' },
@@ -119,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'igor',   nome: 'Igor Prado',   especialidade: 'Cortes contemporâneos' },
   ];
 
-  /* ============ 6. SISTEMA DE AGENDAMENTO ============ */
   const bookingCard   = $('.booking__card');
   const stepsEls       = $$('.booking__step', bookingCard);
   const panels         = $$('.booking__panel', bookingCard);
@@ -127,16 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const barberOptions  = $('#barberOptions');
   const slotOptions    = $('#slotOptions');
 
-  // Estado central do agendamento
+
   const estado = {
     passo: 1,
     servico: null,
     barbeiro: null,
-    data: null,       // objeto Date
+    data: null,      
     horario: null,
   };
 
-  /* --- Renderiza cartões de serviço --- */
+
   servicesData.forEach(servico => {
     const card = document.createElement('button');
     card.type = 'button';
@@ -156,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceOptions.appendChild(card);
   });
 
-  /* --- Renderiza cartões de barbeiro --- */
   barbersData.forEach(barbeiro => {
     const card = document.createElement('button');
     card.type = 'button';
@@ -181,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (botao) botao.disabled = false;
   }
 
-  /* --- Navegação entre passos --- */
   function irParaPasso(numero){
     estado.passo = numero;
 
@@ -193,9 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
       s.classList.toggle('is-done', n < numero);
     });
 
-    // Ao entrar no passo de horários, gera os slots para a data/barbeiro escolhidos
     if (numero === 4) renderizarHorarios();
-    // Ao entrar na confirmação, monta o resumo
+
     if (numero === 5) montarResumo();
 
     bookingCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -208,7 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
     botao.addEventListener('click', () => irParaPasso(estado.passo - 1));
   });
 
-  // Permite clicar diretamente num passo já concluído para editar a escolha
   stepsEls.forEach(s => {
     s.addEventListener('click', () => {
       const n = Number(s.dataset.step);
@@ -216,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ============ 7. CALENDÁRIO CUSTOMIZADO ============ */
   const calendarGrid = $('#calendarGrid');
   const calMonthLabel = $('#calMonthLabel');
   const calPrev = $('#calPrev');
@@ -235,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const primeiroDiaSemana = new Date(mesExibido.getFullYear(), mesExibido.getMonth(), 1).getDay();
     const totalDias = new Date(mesExibido.getFullYear(), mesExibido.getMonth() + 1, 0).getDate();
 
-    // Espaços vazios antes do dia 1
     for (let i = 0; i < primeiroDiaSemana; i++){
       const vazio = document.createElement('span');
       vazio.className = 'calendar__day is-empty';
