@@ -6,23 +6,26 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background: #03030367;
 }
 
 header{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px 20px;
     gap: 20px;
-    width: 100%;
+    max-width: 100%;
+    background-color: #0505056e;
 }
 
 .navbar{
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     cursor: pointer;
-    margin: 10px 
+    margin: 10px ;
 }
 
 .navbar ul{
@@ -37,11 +40,72 @@ header{
 
 .navbar ul li a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 .navbar ul li a:hover{
-    color: #006aff88;
+    color: #fefeff88;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 556px;
+}
+
+.hero-content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hero-content h1{
+    text-align: center;
+}
+
+.hero-text{
+    max-width: 500px;
+    margin-left: 20px;
+    text-align: justify;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: #0b3318;
+    text-shadow: 2px 2px 8px rgba(213, 237, 213, 0.5);
+}
+
+.hero-text p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #0c0c0c;
+    text-shadow: 1px 1px 2px rgba(213, 237, 213, 0.5);
 }
