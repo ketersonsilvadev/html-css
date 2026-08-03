@@ -49,6 +49,7 @@ body {
     text-decoration: none;
     color: #fffefea2;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
