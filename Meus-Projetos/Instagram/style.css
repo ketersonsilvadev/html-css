@@ -105,7 +105,7 @@ button{
     border-radius: 8px;
     cursor: pointer;
     margin-top: 20px;
-    transition: 0.3s;
+    transition: 0.3s ease;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;;
 }
 
@@ -117,12 +117,6 @@ button:hover{
 button:focus-visible {
     outline: 2px solid #2563EB;
     outline-offset: 2px;
-}
-
-.password{
-    display: flex;
-    justify-content: space-between;
-    margin-top:;
 }
 
 @media (max-width: 480px) {
