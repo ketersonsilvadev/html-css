@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     background: linear-gradient(45deg,
             #FEDA75 0%,
@@ -45,7 +45,7 @@ form h1 {
     color: rgba(5, 5, 5, 0.651);
     font-size: 3.2em;
     font-weight: 500;
-    font-family: 'Poppins';
+    font-family: 'Poppins',sans-serif;
     text-shadow: 1px 1px 0px rgba(255, 253, 253, 0.137);
 }
 
@@ -86,12 +86,12 @@ label{
 
 .esqueceu-a-senha a{
     text-decoration: none;
-    color: rgb(255, 0, 0);
+    color: #D62976;
     transition: 0.3s;
 }
 
 .esqueceu-a-senha a:hover{
-    color: rgb(78, 73, 73);
+    color: rgb(255, 0, 0);
     text-decoration: underline;
 }
 
